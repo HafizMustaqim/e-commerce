@@ -1,2 +1,3 @@
 # E-Commerce
-Flutter project template.
+Flutter project E-commerce.
+Project #1.
