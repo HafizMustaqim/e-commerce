@@ -9,8 +9,8 @@ class constantImages {
   static const String facebook = "assets/logos/facebook.svg";
 
   //OnBoarding Images
-  static const String onBoardingImage1 = "assets/images/on_boarding_images/searching.gif";
-  static const String onBoardingImage2 = "assets/images/on_boarding_images/shopping.gif";
+  static const String onBoardingImage1 = "assets/images/on_boarding_images/shopping.gif";
+  static const String onBoardingImage2 = "assets/images/on_boarding_images/searching.gif";
   static const String onBoardingImage3 = "assets/images/on_boarding_images/delivery.gif";
 
 }
