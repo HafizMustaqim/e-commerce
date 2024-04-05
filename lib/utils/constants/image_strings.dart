@@ -1,8 +1,8 @@
 class constantImages {
   
   //App logo
-  static const String darkAppLogo = "";
-  static const String lightAppLogo = "";
+  static const String darkAppLogo = "assets/logos/android12splash.png";
+  static const String lightAppLogo = "assets/logos/android12splash.png";
 
   //Social logo
   static const String google = "assets/logos/google.svg";
