@@ -11,7 +11,41 @@ class ConstantTexts {
   static const String onBoardingSubTitle2 = "For Seamless Transactions, Choose Your Payment Path - your Convenience, Our Priority!";
   static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
-  //Home
-  static const String homeAppBarTitle = "Good day fir shopping";
-  static const String homeAppBarSubTitle = "Hafiz Mustaqim";
+  //Auth Form Texts
+  static const String firstName = "First Name";
+  static const String lastName = "Last Name";
+  static const String email = "E-Mail";
+  static const String password = "Password";
+  static const String newPassword = "New Password";
+  static const String username = "Username";
+  static const String phoneNo = "Phone Number";
+  static const String rememberMe = "Remember Me";
+  static const String forgetPassword = "Forget Password";
+  static const String signIn = "Sign In";
+  static const String createAccount = "Create Account";
+  static const String orSignInWith = "or Sign In with";
+  static const String orSignUpWith = "or Sign Up with";
+  static const String iAggreeTo = "I aggree to";
+  static const String privacyPolicy = "Privacy Policy";
+  static const String termsOfUse = "Terms of use";
+  static const String verificationCode = "Verification Code";
+  static const String resendEmail = "Resend E-Mail";
+  static const String resendEmailIn = "Resend E-Mail in";
+
+
+  //Auth Headings Texts
+  static const String loginTitle = "Welcome back,";
+  static const String loginSubTitle = "Discover Limmitless Choices and Unmatched Convenience.";
+  static const String signUpTitle = "Let's create your account";
+  static const String forgetPasswordTitle = "Forgoet password";
+  static const String forgetPasswordSubTitle = "Don't worry sometimes people can forget too, enter your email and we will send your a password reset link.";
+  static const String changeYourPasswordTitle = "Password Reset Email Sent.";
+  static const String changeYourPasswordSubTitle = "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
+  static const String confirmEmail = "Verify your Email address!";
+  static const String confirmEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and and Experience a World of Unrivaled Deals and Personalized Offers.";
+  static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
+  static const String yourAccountCreatedTitle = "Your account successfully created!";
+  static const String yourAccountCreatedSubTitle = "Welcome to your Ultimate Shopping Destination: Yout Account is Created, Unleash the Joy of Seamless Online Shopping!";
+
+
 }
