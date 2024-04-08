@@ -1,12 +1,12 @@
-class constantImages {
+class ConstantImages {
   
   //App logo
   static const String darkAppLogo = "assets/logos/android12splash.png";
   static const String lightAppLogo = "assets/logos/android12splash.png";
 
   //Social logo
-  static const String google = "assets/logos/google.svg";
-  static const String facebook = "assets/logos/facebook.svg";
+  static const String google = "assets/logos/google.png";
+  static const String facebook = "assets/logos/facebook.png";
 
   //OnBoarding Images
   static const String onBoardingImage1 = "assets/images/on_boarding_images/shopping.gif";
