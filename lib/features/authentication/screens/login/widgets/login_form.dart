@@ -1,4 +1,4 @@
-import 'package:e_commerce/features/authentication/screens/signup/widgets/signup.dart';
+import 'package:e_commerce/features/authentication/screens/signup/signup.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +19,7 @@ class LoginForm extends StatelessWidget {
           children: [
             //Email
             TextFormField(
-              decoration: const InputDecoration(prefixIcon: Icon(Iconsax.user), labelText: ConstantTexts.email),
+              decoration: const InputDecoration(prefixIcon: Icon(Iconsax.direct), labelText: ConstantTexts.email),
             ),
             const SizedBox(height: ConstantSizes.spaceBetweenInputFields),
         
