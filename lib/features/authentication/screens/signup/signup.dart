@@ -24,7 +24,7 @@ class SignupScreen extends StatelessWidget {
               const SizedBox(height: ConstantSizes.spaceBetweenSections),
 
               //Form
-              SignUpForm(),
+              const SignUpForm(),
               const SizedBox(height: ConstantSizes.spaceBetweenSections),
 
               //Divider
