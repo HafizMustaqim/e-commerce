@@ -13,4 +13,12 @@ class ConstantImages {
   static const String onBoardingImage2 = "assets/images/on_boarding_images/sammy-line-sailor-on-mast-looking-through-telescope.gif";
   static const String onBoardingImage3 = "assets/images/on_boarding_images/sammy-line-man-and-dog-delivering-packages-on-a-moped.gif";
 
+  //Animations
+  static const String staticSuccessIllustration = "assets/images/animations/sammy-line-man-and-woman-high-fiving-each-other.png";
+  static const String deliveredEmailIllustration = "assets/images/animations/sammy-line-man-receives-a-mail.png";
+  // static const String deliveredEmailIllustration = "assets/images/animations/";
+  // static const String deliveredEmailIllustration = "assets/images/animations/";
+  // static const String deliveredEmailIllustration = "assets/images/animations/";
+  // static const String deliveredEmailIllustration = "assets/images/animations/";
+
 }
