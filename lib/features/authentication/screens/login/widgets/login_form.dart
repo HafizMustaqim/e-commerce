@@ -1,3 +1,4 @@
+import 'package:e_commerce/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:e_commerce/features/authentication/screens/signup/signup.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/text_strings.dart';
@@ -37,14 +38,16 @@ class LoginForm extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                //Remember Me
                 Row(
                   children: [
                     Checkbox(value: true, onChanged: (value) {}),
                     const Text(ConstantTexts.rememberMe),
                   ],
                 ),
-        
-                TextButton(onPressed: () {}, child: const Text(ConstantTexts.forgetPassword)),
+
+                //Forget Password
+                TextButton(onPressed: () => Get.to(() => const ForgetPassword()), child: const Text(ConstantTexts.forgetPassword)),
               ],
             ),
             const SizedBox(height: ConstantSizes.spaceBetweenSections),
