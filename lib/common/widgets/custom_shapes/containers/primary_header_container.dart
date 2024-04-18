@@ -23,6 +23,7 @@ class PrimaryHeaderContainer extends StatelessWidget {
               //Background Custom Shapes
               Positioned(top: -150, right: -250, child: CircularContainer(backgroundColor: ConstantColors.textWhite.withOpacity(0.1))),
               Positioned(top: 100, right: -300, child: CircularContainer(backgroundColor: ConstantColors.textWhite.withOpacity(0.1))),
+              child,
             ],
           ),
         ),
