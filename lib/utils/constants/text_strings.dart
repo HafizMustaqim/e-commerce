@@ -47,5 +47,8 @@ class ConstantTexts {
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubTitle = "Welcome to your Ultimate Shopping Destination: Yout Account is Created, Unleash the Joy of Seamless Online Shopping!";
 
+  //Home
+  static const String homeAppbarTitle = "Good day for shopping";
+  static const String homeAppbarSubTitle= "Hafiz Mustaqim";
 
 }
