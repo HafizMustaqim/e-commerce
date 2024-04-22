@@ -28,4 +28,9 @@ class ConstantImages {
   static const String jeweleryIcon = "assets/icons/categories/icons8-sparkling-diamond-64.png";
   static const String electronicsIcon = "assets/icons/categories/icons8-smartphone-64.png";
 
+  //Banners
+  static const String promoBanner1 = "assets/images/banners/promo-banner-1.png";
+  static const String promoBanner2 = "assets/images/banners/promo-banner-2.png";
+  static const String promoBanner3 = "assets/images/banners/promo-banner-3.png";
+
 }
