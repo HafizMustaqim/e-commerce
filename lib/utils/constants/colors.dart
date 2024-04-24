@@ -39,8 +39,8 @@ class ConstantColors{
   static const Color buttonDisabled = Color(0xFFC4C4C4);
 
   //Border Colors
-  static const Color borderPrimary = Color(0xFFD90909);
-  static const Color borderSecondary = Color(0xFFE6E6E6);
+  static const Color borderPrimary = Color(0xFFE6E6E6);
+  static const Color borderSecondary = Color(0xFFE0E0E0);
 
   //Error and Validation Colors
   static const Color error = Color(0XFFD32F2F);

@@ -32,5 +32,14 @@ class ConstantImages {
   static const String promoBanner1 = "assets/images/banners/promo-banner-1.png";
   static const String promoBanner2 = "assets/images/banners/promo-banner-2.png";
   static const String promoBanner3 = "assets/images/banners/promo-banner-3.png";
+  static const String promoBanner4 = "assets/images/banners/promo-banner-4.png";
+  static const String promoBanner5 = "assets/images/banners/promo-banner-5.png";
+
+  //Products
+  static const String productImage1 = "assets/images/products/shoe-1.png";
+  static const String productImage2 = "assets/images/products/shoe-2.png";
+  static const String productImage3 = "assets/images/products/shoe-3.png";
+  static const String productImage4 = "assets/images/products/shoe-4.png";
+  static const String productImage5 = "assets/images/products/shoe-5.png";
 
 }
