@@ -1,5 +1,7 @@
 import 'package:e_commerce/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:e_commerce/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:e_commerce/common/widgets/layouts/grid_layout.dart';
+import 'package:e_commerce/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:e_commerce/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_categories.dart';
@@ -14,11 +16,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            PrimaryHeaderContainer(
+            const PrimaryHeaderContainer(
               child: Column(
                 children: [
                   //Appbar
@@ -46,8 +48,17 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(ConstantSizes.defaultSpace),
-              child: PromoSlider(banners: [ConstantImages.promoBanner1, ConstantImages.promoBanner2, ConstantImages.promoBanner3]),
+              padding: const EdgeInsets.all(ConstantSizes.defaultSpace),
+              child: Column(
+                children: [
+                  //Promo Slider
+                  const PromoSlider(banners: [ConstantImages.promoBanner1, ConstantImages.promoBanner2, ConstantImages.promoBanner3, ConstantImages.promoBanner4, ConstantImages.promoBanner5]),
+                  const SizedBox(height: ConstantSizes.spaceBetweenItems),
+
+                  //Popular Products
+                  GridLayout(itemCount: 4, itemBuilder: (_, index) => const ProductCardVertical()),
+                ],
+              ),
             )
           ],
         ),
