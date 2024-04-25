@@ -78,32 +78,39 @@ class ProductCardVertical extends StatelessWidget {
                       const Icon(Iconsax.verify5, color: ConstantColors.primary, size: ConstantSizes.iconXs),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //Price
-                      const ProductPriceText(price: '179.00'),
-
-                      //Add to cart button
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: ConstantColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(ConstantSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(ConstantSizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: ConstantSizes.iconLg * 1.2,
-                          height: ConstantSizes.iconLg * 1.2,
-                          child: Center(child: Icon(Iconsax.add, color: ConstantColors.white))
-                        ),
-                      ),
-                    ],
-                  )
                 ],
               ),
             ),
+
+            const Spacer(),
+
+            //Price Row    
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //Price
+                const Padding(
+                  padding: EdgeInsets.only(left: ConstantSizes.sm),
+                  child: ProductPriceText(price: '179.00'),
+                ),
+
+                //Add to cart button
+                Container(
+                  decoration: const BoxDecoration(
+                    color: ConstantColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(ConstantSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(ConstantSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    width: ConstantSizes.iconLg * 1.2,
+                    height: ConstantSizes.iconLg * 1.2,
+                    child: Center(child: Icon(Iconsax.add, color: ConstantColors.white))
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
