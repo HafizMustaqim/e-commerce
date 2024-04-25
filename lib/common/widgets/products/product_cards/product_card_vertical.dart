@@ -2,6 +2,7 @@ import 'package:e_commerce/common/styles/shadows.dart';
 import 'package:e_commerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce/common/widgets/icons/circular_icon.dart';
 import 'package:e_commerce/common/widgets/images/rounded_image.dart';
+import 'package:e_commerce/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:e_commerce/common/widgets/texts/product_price_text.dart';
 import 'package:e_commerce/common/widgets/texts/product_title_text.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
@@ -64,20 +65,14 @@ class ProductCardVertical extends StatelessWidget {
             const SizedBox(height: ConstantSizes.spaceBetweenItems / 2),
       
             //Details
-            Padding(
-              padding: const EdgeInsets.only(left: ConstantSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: ConstantSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductTitleText(title: 'OL Asas Kapok', smallSize: true),
-                  const SizedBox(height: ConstantSizes.spaceBetweenItems / 2),
-                  Row(
-                    children: [
-                      Text('Makerz', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium),
-                      const SizedBox(width: ConstantSizes.xs),
-                      const Icon(Iconsax.verify5, color: ConstantColors.primary, size: ConstantSizes.iconXs),
-                    ],
-                  ),
+                  ProductTitleText(title: 'OL Asas Kapok', smallSize: true),
+                  SizedBox(height: ConstantSizes.spaceBetweenItems / 2),
+                  BrandTitleWithVerification(title: 'Makerz'),
                 ],
               ),
             ),
