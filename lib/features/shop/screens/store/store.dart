@@ -73,13 +73,7 @@ class StoreScreen extends StatelessWidget {
         }, 
         //Body
         body: const TabBarView(
-          children: [
-            CategoryTab(),
-            CategoryTab(),
-            CategoryTab(),
-            CategoryTab(),
-            CategoryTab(),
-          ],
+          children: [CategoryTab(), CategoryTab(), CategoryTab(), CategoryTab(), CategoryTab()],
         ),
         ),
       ),
