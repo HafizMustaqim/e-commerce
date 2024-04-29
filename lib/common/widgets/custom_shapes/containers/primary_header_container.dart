@@ -16,16 +16,13 @@ class PrimaryHeaderContainer extends StatelessWidget {
       child: Container(
         color: ConstantColors.primary,
         padding: const EdgeInsets.all(0),
-        child: SizedBox(
-          height: 400,
-          child: Stack(
-            children: [
-              //Background Custom Shapes
-              Positioned(top: -150, right: -250, child: CircularContainer(backgroundColor: ConstantColors.textWhite.withOpacity(0.1))),
-              Positioned(top: 100, right: -300, child: CircularContainer(backgroundColor: ConstantColors.textWhite.withOpacity(0.1))),
-              child,
-            ],
-          ),
+        child: Stack(
+          children: [
+            //Background Custom Shapes
+            Positioned(top: -150, right: -250, child: CircularContainer(backgroundColor: ConstantColors.textWhite.withOpacity(0.1))),
+            Positioned(top: 100, right: -300, child: CircularContainer(backgroundColor: ConstantColors.textWhite.withOpacity(0.1))),
+            child,
+          ],
         ),
       ),
     );

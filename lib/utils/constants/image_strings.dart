@@ -33,6 +33,9 @@ class ConstantImages {
   static const String promoBanner2 = "assets/images/banners/promo-banner-2.png";
   static const String promoBanner3 = "assets/images/banners/promo-banner-3.png";
 
+  //Profile
+  static const String user = "assets/images/user/user.png";
+
   //Products
   static const String productImage1 = "assets/images/products/shoe-1.png";
   static const String productImage2 = "assets/images/products/shoe-2.png";

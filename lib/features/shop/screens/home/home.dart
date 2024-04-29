@@ -44,6 +44,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(height: ConstantSizes.spaceBetweenSections),
                 ],
               ),
             ),
@@ -63,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                   GridLayout(itemCount: 4, itemBuilder: (_, index) => const ProductCardVertical()),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
