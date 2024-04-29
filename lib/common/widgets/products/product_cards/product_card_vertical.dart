@@ -34,7 +34,7 @@ class ProductCardVertical extends StatelessWidget {
             // Thumbnails, Wishlist Button, Discount Tag
             RoundedContainer(
               height: 180,
-              // padding: const EdgeInsets.all(ConstantSizes.sm), //<------------check again the sizing!!
+              padding: const EdgeInsets.all(ConstantSizes.sm), //===============check again the sizing!!===============
               backgroundColor: dark ? ConstantColors.dark : ConstantColors.light,
               child: 
               Stack(
