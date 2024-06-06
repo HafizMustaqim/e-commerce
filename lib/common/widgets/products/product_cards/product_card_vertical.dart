@@ -70,9 +70,9 @@ class ProductCardVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ProductTitleText(title: 'OL Asas Kapok', smallSize: true),
+                  ProductTitleText(title: 'PUMA Smash V2 Men\'s Sneakers', smallSize: true),
                   SizedBox(height: ConstantSizes.spaceBetweenItems / 2),
-                  BrandTitleWithVerification(title: 'Makerz'),
+                  BrandTitleWithVerification(title: 'Puma'),
                 ],
               ),
             ),

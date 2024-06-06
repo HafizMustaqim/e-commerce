@@ -47,7 +47,7 @@ class BrandCard extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const BrandTitleWithVerification(title: 'Makerz', brandTextSize: TextSizes.large),
+                const BrandTitleWithVerification(title: 'Puma', brandTextSize: TextSizes.large),
                 Text(
                   '100 products',
                   overflow: TextOverflow.ellipsis,
