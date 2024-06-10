@@ -50,7 +50,7 @@ class ProductAttributes extends StatelessWidget {
                       //Stock
                       Row(
                         children: [
-                          const ProductTitleText(title: 'Stock', smallSize: true),
+                          const ProductTitleText(title: 'Stock :', smallSize: true),
                           Text('In Stock', style: Theme.of(context).textTheme.titleMedium),
 
                         ],
