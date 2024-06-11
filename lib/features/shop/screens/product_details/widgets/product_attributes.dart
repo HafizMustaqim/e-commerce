@@ -81,8 +81,8 @@ class ProductAttributes extends StatelessWidget {
               spacing: 8,
               children: [
                 CustomChoiceChip(text: 'White', selected: true, onSelected: (value) {}),
-                CustomChoiceChip(text: 'Brown', selected: true, onSelected: (value) {}),
-                CustomChoiceChip(text: 'Black', selected: true, onSelected: (value) {}),
+                CustomChoiceChip(text: 'Brown', selected: false, onSelected: (value) {}),
+                CustomChoiceChip(text: 'Black', selected: false, onSelected: (value) {}),
               ],
             ),
           ],
@@ -96,8 +96,8 @@ class ProductAttributes extends StatelessWidget {
               spacing: 8,
               children: [
                 CustomChoiceChip(text: 'EU 34', selected: true, onSelected: (value) {}),
-                CustomChoiceChip(text: 'EU 36', selected: true, onSelected: (value) {}),
-                CustomChoiceChip(text: 'EU 38', selected: true, onSelected: (value) {}),
+                CustomChoiceChip(text: 'EU 36', selected: false, onSelected: (value) {}),
+                CustomChoiceChip(text: 'EU 38', selected: false, onSelected: (value) {}),
               ],
             ),
           ],
