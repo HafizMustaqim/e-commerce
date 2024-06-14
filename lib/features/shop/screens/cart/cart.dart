@@ -12,37 +12,35 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: Text('Cart', style: Theme.of(context).textTheme.headlineSmall), showBackArrow: true),
-      body: SingleChildScrollView(
+      body: Padding(
+        padding: const EdgeInsets.all(ConstantSizes.defaultSpace),
         child: Padding(
-          padding: const EdgeInsets.all(ConstantSizes.defaultSpace),
-          child: Padding(
-            padding: const EdgeInsets.all(ConstantSizes.defaultSpace),
-            child: ListView.separated(
-              shrinkWrap: true,
-              itemCount: 10,
-              separatorBuilder: (_, __) => const SizedBox(height: ConstantSizes.spaceBetweenSections), 
-              itemBuilder: (_, index) => const Column(
-                children: [
-                  CartItem(),
-                  SizedBox(height: ConstantSizes.spaceBetweenItems),
-            
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          //Extra Space
-                          SizedBox(width: 70),
-                          // Add & Remove Buttons
-                          ProductQuantityWithAddRemoveButton(),
-                        ],
-                      ),
-                      ProductPriceText(price: '186.00'),
-                    ],
-                  ),
-                ],
-              ), 
-            ),
+          padding: const EdgeInsets.all(ConstantSizes.defaultSpace / 2),
+          child: ListView.separated(
+            shrinkWrap: true,
+            itemCount: 6,
+            separatorBuilder: (_, __) => const SizedBox(height: ConstantSizes.spaceBetweenSections), 
+            itemBuilder: (_, index) => const Column(
+              children: [
+                CartItem(),
+                SizedBox(height: ConstantSizes.spaceBetweenItems),
+          
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        //Extra Space
+                        SizedBox(width: 70),
+                        // Add & Remove Buttons
+                        ProductQuantityWithAddRemoveButton(),
+                      ],
+                    ),
+                    ProductPriceText(price: '186.00'),
+                  ],
+                ),
+              ],
+            ), 
           ),
         ),
       ),
