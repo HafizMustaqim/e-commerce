@@ -73,7 +73,7 @@ class CheckoutScreen extends StatelessWidget {
               image: ConstantImages.successPayment,
               title: 'Payment Success',
               subTitle: 'Your item will be shipped soon!',
-              onPressed: () => Get.offAll(() => const NavigationMenu()),,
+              onPressed: () => Get.offAll(() => const NavigationMenu()),
             )), 
           child: const Text('Checkout RM1860.00')),
       ),
