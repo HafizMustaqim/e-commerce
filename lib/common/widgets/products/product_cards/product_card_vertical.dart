@@ -29,7 +29,7 @@ class ProductCardVertical extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [ShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(ConstantSizes.productImageRadius),
-          color: dark ? ConstantColors.darkGrey : ConstantColors.white,
+          color: dark ? ConstantColors.darkerGrey : ConstantColors.white,
         ),
         child: Column(
           children: [
