@@ -3,6 +3,7 @@ import 'package:e_commerce/common/widgets/custom_shapes/containers/search_contai
 import 'package:e_commerce/common/widgets/layouts/grid_layout.dart';
 import 'package:e_commerce/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:e_commerce/common/widgets/texts/section_heading.dart';
+import 'package:e_commerce/features/shop/screens/all_products/all_products.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/promo_slider.dart';
@@ -10,6 +11,7 @@ import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -57,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: ConstantSizes.spaceBetweenItems),
 
                   //Heading
-                  SectionHeading(title: 'Popular Products', onPressed: (){}),
+                  SectionHeading(title: 'Popular Products', onPressed: () => Get.to(() => const AllProducts())),
                   const SizedBox(height: ConstantSizes.spaceBetweenItems),
 
                   //Popular Products
