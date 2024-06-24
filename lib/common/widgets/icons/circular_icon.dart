@@ -30,8 +30,8 @@ class CircularIcon extends StatelessWidget {
         color:  backgroundColor != null 
               ? backgroundColor!
               : HelperFunctions.isDarkMode(context)
-                ? ConstantColors.black.withOpacity(0.9)
-                : ConstantColors.white.withOpacity(0.9),
+                ? ConstantColors.black.withOpacity(0.5)
+                : ConstantColors.white.withOpacity(0.5),
         borderRadius: BorderRadius.circular(100),
       ),
       child: IconButton(onPressed: onPressed, icon: Icon(icon, color: color, size: size)),
