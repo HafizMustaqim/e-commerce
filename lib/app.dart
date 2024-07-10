@@ -1,4 +1,4 @@
-import 'package:e_commerce/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,7 +12,8 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: const OnBoardingScreen(),
+      //Show loader meanwhile auth repo is deciding to show relevant screen
+      home: const Scaffold(backgroundColor: ConstantColors.primary, body: Center(child: CircularProgressIndicator(color: Colors.white))),
     );
   }
 }
