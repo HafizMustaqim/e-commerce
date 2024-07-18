@@ -16,6 +16,7 @@ class ConstantImages {
   //Animations
   static const String staticSuccessIllustration = "assets/images/animations/sammy-line-man-and-woman-high-fiving-each-other.png";
   static const String deliveredEmailIllustration = "assets/images/animations/sammy-line-man-receives-a-mail.png";
+  static const String processing = "assets/images/animations/processing.json";
 
   //Category Icons
   static const String sportIcon = "assets/icons/categories/icons8-bowling-64.png";
