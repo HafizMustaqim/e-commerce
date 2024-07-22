@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> main() async{
 
@@ -18,6 +19,9 @@ Future<void> main() async{
   //Await Native Splash
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   
+  //Load env variables
+  await dotenv.load(fileName: ".env");
+
   //Initialize Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then(
       (FirebaseApp value) => Get.put(AuthenticationRepository()),

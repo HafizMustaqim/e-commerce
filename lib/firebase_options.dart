@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -46,8 +47,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBcYk-_wFxJ_RjAdq6IzFKULcJ2dGrwATA',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['WEB_API_KEY']!,
     appId: '1:421788068038:web:096b590f7090b36125cfc7',
     messagingSenderId: '421788068038',
     projectId: 'e-commerce-24a66',
@@ -55,16 +56,16 @@ class DefaultFirebaseOptions {
     storageBucket: 'e-commerce-24a66.appspot.com',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDQ82dAFntpzgwS6fliBPjvwwBE7iTpRhM',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['ANDROID_API_KEY']!,
     appId: '1:421788068038:android:5c219ae155ca0a6925cfc7',
     messagingSenderId: '421788068038',
     projectId: 'e-commerce-24a66',
     storageBucket: 'e-commerce-24a66.appspot.com',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC2-kzjJDLVJaZjYXLPhUmF2z6dSuhjcxo',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['IOS_API_KEY']!,
     appId: '1:421788068038:ios:1d0a20a0e31a787925cfc7',
     messagingSenderId: '421788068038',
     projectId: 'e-commerce-24a66',
