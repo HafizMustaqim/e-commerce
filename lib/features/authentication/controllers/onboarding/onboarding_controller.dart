@@ -38,7 +38,7 @@ class OnBoardingController extends GetxController {
         print(storage.read('IsFirstTime'));
       }
 
-      Get.offAll(const LoginScreen());
+      Get.offAll(() => const LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);
