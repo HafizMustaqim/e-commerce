@@ -7,10 +7,12 @@ import 'package:e_commerce/utils/exceptions/firebase_exceptions.dart';
 import 'package:e_commerce/utils/exceptions/format_exceptions.dart';
 import 'package:e_commerce/utils/exceptions/platform_exceptions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
@@ -18,6 +20,7 @@ class AuthenticationRepository extends GetxController {
   //Variables
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
+  
   //Called from main.dart on app launch
   @override
   void onReady() {
@@ -104,6 +107,33 @@ class AuthenticationRepository extends GetxController {
   /*===================================Federated Identity & Social Sign-In===================================*/
 
   //GoogleAuthentication - Google
+   Future<UserCredential?> signInWithGoogle() async {
+    try {
+      //trigger the auth flow
+      final GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
+
+      //obtain the auth details fromm the request
+      final GoogleSignInAuthentication? googleAuth = await userAccount?.authentication;
+
+      //create a new credential
+      final credentials = GoogleAuthProvider.credential(accessToken: googleAuth?.accessToken, idToken: googleAuth?.idToken);
+
+      //once signed in, return the UserCredential
+      return await _auth.signInWithCredential(credentials);
+
+    } on FirebaseAuthException catch (e) {
+      throw CustomFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw CustomFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const CustomFormatException();
+    } on PlatformException catch (e) {
+      throw CustomPlatformException(e.code).message;
+    } catch (e) {
+      if(kDebugMode) print('Something went wrong: $e');
+      return null;
+    }
+  }
 
   //FacebookAuthentication - Facebook
 
@@ -112,6 +142,7 @@ class AuthenticationRepository extends GetxController {
   //LogoutUser - for any authentication
   Future<void> logout() async {
     try {
+      await GoogleSignIn().signOut();
       await FirebaseAuth.instance.signOut();
       Get.offAll(() => const LoginScreen());
     } on FirebaseAuthException catch (e) {
