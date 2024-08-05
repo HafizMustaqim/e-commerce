@@ -7,11 +7,40 @@
 .atom/
 .buildlog/
 .history
+.vscode/
 .svn/
 migrate_working_dir/
 
 # Environment variables file
 .env
+
+# Android
+**/local.properties
+**/GeneratedPluginRegistrant.java
+
+# iOS
+**/Pods/
+**/Podfile.lock
+**/.symlinks/
+**/Flutter/Flutter.framework
+**/Flutter/App.framework
+**/Flutter/Flutter.podspec
+**/ServiceDefinitions.json
+**/Runner/GeneratedPluginRegistrant.*
+**/Runner/Flutter.framework
+**/flutter_export_environment.sh
+**/flutter_export_environment.json
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+
+# Windows
+windows/runner/GeneratedPluginRegistrant.*
+
+# Linux
+linux/flutter/generated_plugin_registrant.cc
+
+# Web
+web/GeneratedPluginRegistrant.*
 
 # IntelliJ related
 *.iml
