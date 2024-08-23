@@ -1,3 +1,4 @@
+import 'package:e_commerce/data/repositories/user/user_repository.dart';
 import 'package:e_commerce/features/authentication/screens/login/login.dart';
 import 'package:e_commerce/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:e_commerce/features/authentication/screens/signup/verify_email.dart';
@@ -21,6 +22,9 @@ class AuthenticationRepository extends GetxController {
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
   
+  //Get authenticated user
+  User? get authUser => _auth.currentUser;
+
   //Called from main.dart on app launch
   @override
   void onReady() {
@@ -31,7 +35,7 @@ class AuthenticationRepository extends GetxController {
   }
 
   //Function to show Relevant Screen
-  screenRedirect() async {
+  void screenRedirect() async {
     final user = _auth.currentUser;
     if(user != null) {
       if(user.emailVerified) {
@@ -118,6 +122,26 @@ class AuthenticationRepository extends GetxController {
   }
 
   //ReAuthenticate - ReAuthenticate User
+  Future<void> reAuthenticateWithEmailAndPassword(String email, String password) async {
+    try {
+      //create a credential
+      AuthCredential credential = EmailAuthProvider.credential(email: email, password: password);
+
+      //ReAuthenticate
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      throw CustomFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw CustomFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const CustomFormatException();
+    } on PlatformException catch (e) {
+      throw CustomPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
+
 
   /*===================================Federated Identity & Social Sign-In===================================*/
 
@@ -174,5 +198,20 @@ class AuthenticationRepository extends GetxController {
   }
 
   //DeleteUser - remove user auth and firestore account
-
+  Future<void> deleteAccount() async {
+    try {
+      await UserRepository.instance.removeUserRecord(_auth.currentUser!.uid);
+      await _auth.currentUser?.delete();
+    } on FirebaseAuthException catch (e) {
+      throw CustomFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw CustomFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const CustomFormatException();
+    } on PlatformException catch (e) {
+      throw CustomPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again.';
+    }
+  }
 }
